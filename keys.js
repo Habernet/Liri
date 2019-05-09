@@ -10,5 +10,5 @@ exports.omdb = {
 };
 // Export the Bands In Town key that is stored on the environment variable
 exports.bit = {
-
+  id: process.env.BIT_ID 
 };
