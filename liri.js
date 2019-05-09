@@ -4,6 +4,14 @@ require("dotenv").config();
 // Use the FileSystem of the server to pull from random.txt, use this for do-what-it-says
 var fs = require("fs");
 
+// Variable to import the functionality of the Spotify API call
+var spotify = require("./spotify");
+
+// Test that it imported correctly
+console.log(spotify);
+spotify.call("hello world");
+
+
 // API Keys will be stored in this variable
 var keys = require("./keys");
 // Break down the above keys object and grab each API key
