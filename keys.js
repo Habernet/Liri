@@ -6,11 +6,9 @@ exports.spotify = {
 };
 // Export the OMDB key that is stored on the environment variable
 exports.omdb = {
-  id: process.env.OMDB_ID,
-  secret: process.env.OMDB_SECRET
+  key: process.env.OMDB_KEY
 };
 // Export the Bands In Town key that is stored on the environment variable
 exports.bit = {
-  id: process.env.BIT_ID,
-  secret: process.env.BIT_SECRET
+
 };
