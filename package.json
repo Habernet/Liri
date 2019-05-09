@@ -1,0 +1,22 @@
+{
+  "name": "liri",
+  "version": "1.0.0",
+  "description": "A Siri like CLI app that responds to the commands \"concert-this\", \"spotify-this-song\", \"movie-this\", and \"do-what-it-says\".\"",
+  "main": "keys.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Habernet/Liri.git"
+  },
+  "author": "Patrick Haberern",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Habernet/Liri/issues"
+  },
+  "homepage": "https://github.com/Habernet/Liri#readme",
+  "dependencies": {
+    "axios": "^0.18.0"
+  }
+}
