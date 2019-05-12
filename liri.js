@@ -45,3 +45,4 @@ switch (command) {
 // 1. Write main logic to gather input, test for commands and execute the right calls accordingly.
 // 2. Take a look at the Spotify call..return needs to be better? Returns objects that I can't see.
 // 3. Account for multiple word movies and bands
+// 4. JSON.stringify?
