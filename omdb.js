@@ -18,5 +18,5 @@ exports.call = (movie) => {
         console.log("It worked!", resp.data);
         // Now we will format for displaying in the console
         // Catch errors!
-    });
+    }).catch(err => {console.log(err)});
 }

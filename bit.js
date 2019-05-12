@@ -13,12 +13,13 @@ exports.call = (artist) => {
     // Make the call
     axios.get(queryURL).then(resp => {
         // Now we will format for displaying in the console
-        for (let i = 0; i < 2; i++) {
+        for (let i = 0; i < 10; i++) {
             console.log("Venue name: ", resp.data[i].venue.name);
             console.log("City: ", resp.data[i].venue.city);
             console.log("Date: ", resp.data[i].datetime);
             console.log("Website: ", resp.data[i].url, '\n');
         }
+        (err) => {console.log("Error: ", err)};
         // Catch errors!
     });
 }

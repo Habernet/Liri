@@ -15,8 +15,15 @@ exports.call = (song) => {
     spotify
         .search({ type: 'track', query: song })
         .then((response) => {
-            console.log('It worked!', response);
-            // Here we will display in console
+            console.log(response.tracks.items[0].album.artists[0].name);
+            console.log(song);
+            console.log(response.tracks.items[0].external_urls.href);
+            // console.log(response.tracks.items[0].album) CANT FIND ALBUM
+
+            // Artist(s)
+            // The song's name
+            // A preview link of the song from Spotify
+            // The album that the song is from
         })
         .catch((err) => {
             console.log(err);
