@@ -1,4 +1,3 @@
-console.log('Keys.js Loaded.');
 // Export the Spotify key that is stored on the environment variable
 exports.spotify = {
   id: process.env.SPOTIFY_ID,

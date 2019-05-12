@@ -19,7 +19,5 @@ exports.call = (artist) => {
             console.log("Date: ", resp.data[i].datetime);
             console.log("Website: ", resp.data[i].url, '\n');
         }
-        (err) => {console.log("Error: ", err)};
-        // Catch errors!
-    });
+    }).catch(err => {console.log(err)});
 }
