@@ -14,6 +14,7 @@ exports.call = (artist) => {
     axios.get(queryURL).then(resp => {
         // Now we will format for displaying in the console
         for (let i = 0; i < 10; i++) {
+            // Store this information in an object that can also be written to log.txt
             console.log("Venue name: ", resp.data[i].venue.name);
             console.log("City: ", resp.data[i].venue.city);
             console.log("Date: ", resp.data[i].datetime);

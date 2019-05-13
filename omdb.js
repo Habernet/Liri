@@ -11,15 +11,7 @@ exports.call = (movie) => {
 
     //Make the call
     axios.get(queryURL).then(resp => {
-        // * Title of the movie.
-        // * Year the movie came out.
-        // * IMDB Rating of the movie.
-        // * Rotten Tomatoes Rating of the movie.
-        // * Country where the movie was produced.
-        // * Language of the movie.
-        // * Plot of the movie.
-        // * Actors in the movie.
-
+        // Store this information in an object that can also be written to log.txt
         console.log("Title: ", resp.data.Title);
         console.log("Year Released: ", resp.data.Year);
         console.log("IMDB Rating: ", resp.data.imdbRating);
