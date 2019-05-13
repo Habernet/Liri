@@ -9,8 +9,15 @@ const inquirer = require("inquirer"); // Load the inquirer
 
 
 // Function to log everything out
-var writeLog = function () {
+var writeLog = function (textToLog) {
+    // Log new lines to give room between logs
+    fs.appendFile("log.txt", '\r\n\r\n', function (err) {
+        if (err) {return console.log(err);};
+    });
     // Use FS to write to log.txt every output
+    fs.appendFile("log.txt", textToLog, (err) => {
+        if (err) { console.log(err);};
+    })
 }
 
 
@@ -18,7 +25,10 @@ var concertThis = () => {
     let concertQuestion = {
         type: 'input',
         name: 'concert',
-        message: 'What band do you want to search for? '
+        message: 'What band do you want to search for? ',
+        validate: (name) => {
+            return name !== '';
+        }
     };
 
     inquirer.prompt(concertQuestion).then(answer => {
@@ -30,7 +40,10 @@ var spotifyThis = () => {
     let spotifyQuestion = {
         type: 'input',
         name: 'spotify',
-        message: 'What song do you want to search for? '
+        message: 'What song do you want to search for? ',
+        validate: (name) => {
+            return name !== '';
+        }
     };
 
     inquirer.prompt(spotifyQuestion).then(answer => {
@@ -42,7 +55,10 @@ var movieThis = () => {
     let movieQuestion = {
         type: 'input',
         name: 'movie',
-        message: 'What movie are you looking for? '
+        message: 'What movie are you looking for? ',
+        validate: (name) => {
+            return name !== '';
+        }
     };
 
     inquirer.prompt(movieQuestion).then(answer => {
@@ -79,7 +95,7 @@ inquirer.prompt(question).then(answers => {
 
 
 //TO DO
-// 2. Log output to log.txt
+//1. Finish sending everything to logger
 // 3. Pull in from random.txt for the do-what-it-says bit
 // 4. Format the date on BIT using moment.js
 // 5. README!
