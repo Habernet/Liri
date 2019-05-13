@@ -91,12 +91,9 @@ inquirer.prompt(question).then(answers => {
     };
 });
 
-
-
-
 //TO DO
-//1. Finish sending everything to logger
+// 2. something weird is happening with log..promises maybe? Still works.
 // 3. Pull in from random.txt for the do-what-it-says bit
-// 4. Format the date on BIT using moment.js
 // 5. README!
-// 6. Errors and format output of some of the API's
+// 6. format output of some of the API's MAINLY SPOTIFY
+// 7. DO SOMETHING DIFFERENT WITH ERRORS.

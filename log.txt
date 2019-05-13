@@ -1,32 +1,17 @@
+----------05:13:2019:17:28----------
 
 
-----------05:13:2019:17:05----------
+Title: The Matrix
+Year Released: 1999
+IMDB Rating: 8.7
+Rotten Tomatoes Rating: 88%
+Produced in: USA
+Language/Languages: English
+Plot: A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.
+Actors: Keanu Reeves, Laurence Fishburne, Carrie-Anne Moss, Hugo Weaving
 
 
-Venue name: End of the Road World Tour - Leipzig, Germany
-City: Leipzig
-Date: 2019-05-27T19:30:00
-Website: https://www.bandsintown.com/e/100465149?app_id=codingbootcamp&came_from=267&utm_medium=api&utm_source=public_api&utm_campaign=event
-
-
-----------05:13:2019:17:05----------
-
-
-Venue name: End of the Road World Tour - Vienna, Austria
-City: Vienna
-Date: 2019-05-29T19:30:00
-Website: https://www.bandsintown.com/e/100465183?app_id=codingbootcamp&came_from=267&utm_medium=api&utm_source=public_api&utm_campaign=event
-
-
-----------05:13:2019:17:16----------
-
-
-Artist: Adele
-Song: undefined
-Preview: undefined
-
-
-----------05:13:2019:17:23----------
+----------05:13:2019:17:29----------
 
 
 Title: The Matrix Revolutions
@@ -37,3 +22,21 @@ Produced in: USA
 Language/Languages: English, French
 Plot: The human city of Zion defends itself against the massive invasion of the machines as Neo fights to end the war at another front while also opposing the rogue Agent Smith.
 Actors: Mary Alice, Tanveer K. Atwal, Helmut Bakaitis, Kate Beahan
+
+
+----------05:13:2019:17:30----------
+
+
+
+----------05:13:2019:17:30----------
+
+
+Venue name: End of the Road World Tour - Leipzig, Germany
+City: Leipzig
+Date: 27:05:2019:19:05
+Website: https://www.bandsintown.com/e/100465149?app_id=codingbootcamp&came_from=267&utm_medium=api&utm_source=public_api&utm_campaign=event
+
+Venue name: End of the Road World Tour - Vienna, Austria
+City: Vienna
+Date: 29:05:2019:19:05
+Website: https://www.bandsintown.com/e/100465183?app_id=codingbootcamp&came_from=267&utm_medium=api&utm_source=public_api&utm_campaign=event

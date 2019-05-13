@@ -8,7 +8,7 @@ exports.call = (artist) => {
     const BITID = keys.bit.id;
 
     // Bring in Moment.js to format the date NOT WORKING YET
-    // var moment = require('moment');
+    var moment = require('moment');
 
     // var date = moment('2019-10-03T19:00:29', 'MM-DD-YYYY');
     // console.log(date);
@@ -27,7 +27,7 @@ exports.call = (artist) => {
             // Store this information in an object that can also be written to log.txt
             var venue = "Venue name: " + resp.data[i].venue.name;
             var city = "City: " + resp.data[i].venue.city;
-            var date = "Date: " + resp.data[i].datetime;
+            var date = "Date: " + moment(resp.data[i].datetime).format("DD:MM:YYYY:HH:MM");
             var website = "Website: " + resp.data[i].url;
             var stringToLog = '\n' + venue + '\n' + city + '\n' + date + '\n' + website + '\n'
             console.log(stringToLog);
