@@ -19,6 +19,7 @@ exports.call = (movie) => {
         // * Language of the movie.
         // * Plot of the movie.
         // * Actors in the movie.
+
         console.log("Title: ", resp.data.Title);
         console.log("Year Released: ", resp.data.Year);
         console.log("IMDB Rating: ", resp.data.imdbRating);

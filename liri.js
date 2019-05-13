@@ -1,48 +1,86 @@
 // Read and set any environment variable with dotenv
 require("dotenv").config();
 
-// Use the FileSystem of the server to pull from random.txt, use this for do-what-it-says
-const fs = require("fs");
-// Variable to import the functionality of the spotify.js
-const spotify = require("./spotify");
-// Variable to import the functionality of the OMDB API call
-const omdb = require("./omdb");
-//Variable to import the functionality  of the BIT API call
-const bit = require("./bit");
+const fs = require("fs"); // Filesystem
+const spotify = require("./spotify"); // Spotify package
+const omdb = require("./omdb"); // OMDB package
+const bit = require("./bit"); // Bands in Town Package
+const inquirer = require("inquirer"); // Load the inquirer
 
 
-// Create a variable to store the command from the CLI
-var command = process.argv[2];
-// Create a variable to store the string that we want to pass to an API call
-var liriThis = process.argv[3];
-
-
-// Main logic
-// Test to make sure input is correct
-// Make API calls based on the filtered input
-
-// if (command !== 'concert-this' || 'spotify-this-song' || 'movie-this' || 'do-what-it-says') {
-//     console.log("Liri only reads commands: 'concert-this', 'spotify-this-song', 'movie-this', and 'do-what-it-says'! Please try again.")
-// }
-
-
-switch (command) {
-    case 'concert-this':
-        bit.call(liriThis);
-        break;
-    case 'spotify-this-song':
-        spotify.call(liriThis);
-        break;
-    case 'movie-this':
-        omdb.call(liriThis);
-        break;
-    case 'do-what-it-says':
-        // Still needs to be written
-        break;
+// Function to log everything out
+var writeLog = function () {
+    // Use FS to write to log.txt every output
 }
 
+
+var concertThis = () => {
+    let concertQuestion = {
+        type: 'input',
+        name: 'concert',
+        message: 'What band do you want to search for? '
+    };
+
+    inquirer.prompt(concertQuestion).then(answer => {
+        bit.call(answer.concert);
+    });
+};
+
+var spotifyThis = () => {
+    let spotifyQuestion = {
+        type: 'input',
+        name: 'spotify',
+        message: 'What song do you want to search for? '
+    };
+
+    inquirer.prompt(spotifyQuestion).then(answer => {
+        spotify.call(answer.spotify);
+    });
+};
+
+var movieThis = () => {
+    let movieQuestion = {
+        type: 'input',
+        name: 'movie',
+        message: 'What movie are you looking for? '
+    };
+
+    inquirer.prompt(movieQuestion).then(answer => {
+        omdb.call(answer.movie);
+    });
+};
+
+let question = {
+    type: 'list',
+    name: 'command',
+    message: 'What would you like Liri to do? (arrow keys + enter to select)',
+    choices: ['movie-this', 'spotify-this-song', 'concert-this']
+}
+
+
+inquirer.prompt(question).then(answers => {
+    switch (answers.command) {
+        case 'concert-this':
+            concertThis(); ``
+            break;
+        case 'spotify-this-song':
+            spotifyThis();
+            break;
+        case 'movie-this':
+            movieThis();
+            break;
+        case 'do-what-it-says':
+            // Still needs to be written
+            break;
+    };
+});
+
+
+
+
 //TO DO
-// 1. Write main logic to gather input, test for commands and execute the right calls accordingly.
-// 2. Take a look at the Spotify call..return needs to be better? Returns objects that I can't see.
-// 3. Account for multiple word movies and bands
-// 4. JSON.stringify?
+// 2. Log output to log.txt
+// 3. Pull in from random.txt for the do-what-it-says bit
+// 4. Format the date on BIT using moment.js
+// 5. README!
+// 6. Errors and format output of some of the API's
