@@ -1,4 +1,6 @@
 exports.call = (song) => {
+    // Bring in the logger
+    const logger = require('./logger');
 
     // Bring in the id and secret for the call
     const spotifyInfo = require("./keys");
@@ -15,17 +17,18 @@ exports.call = (song) => {
     spotify
         .search({ type: 'track', query: song })
         .then((response) => {
-            console.log(response.tracks.items[0].album.artists[0].name);
-            console.log(song);
-            console.log(response.tracks.items[0].external_urls.href);
+            var artist = 'Artist: ' + response.tracks.items[0].album.artists[0].name;
+            var song = 'Song: ' + song //undefined
+            var url = 'Preview: ' + response.tracks.items[0].external_urls.href; // undefined
             // console.log(response.tracks.items[0].album) CANT FIND ALBUM
+            var stringToLog = '\n' + artist + '\n' + song + '\n' + url + '\n';
+            console.log(stringToLog);
+            logger.log(stringToLog);
 
             // Artist(s)
             // The song's name
             // A preview link of the song from Spotify
             // The album that the song is from
-
-            // Store this information in an object that can also be written to log.txt
         })
         .catch((err) => {
             console.log(err);

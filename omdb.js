@@ -2,6 +2,9 @@ exports.call = (movie) => {
     // Bring in the axios module
     const axios = require("axios");
 
+    // Bring in the logger
+    const logger = require('./logger');
+
     // Get the key for the axios call
     var keys = require("./keys");
     const OMDBKey = keys.omdb.key;
@@ -11,14 +14,19 @@ exports.call = (movie) => {
 
     //Make the call
     axios.get(queryURL).then(resp => {
-        // Store this information in an object that can also be written to log.txt
-        console.log("Title: ", resp.data.Title);
-        console.log("Year Released: ", resp.data.Year);
-        console.log("IMDB Rating: ", resp.data.imdbRating);
-        console.log("Rotten Tomatoes Rating: ", resp.data.Ratings[1].Value);
-        console.log("Produced in: ", resp.data.Country);
-        console.log("Language/Languages: ", resp.data.Language);
-        console.log("Plot: ", resp.data.Plot);
-        console.log("Actors: ", resp.data.Actors);
+
+        var title = "Title: " + resp.data.Title;
+        var year = "Year Released: " + resp.data.Year;
+        var imdb = "IMDB Rating: " + resp.data.imdbRating;
+        var tomato = "Rotten Tomatoes Rating: " + resp.data.Ratings[1].Value;
+        var country = "Produced in: " + resp.data.Country;
+        var lang = "Language/Languages: " + resp.data.Language;
+        var plot = "Plot: " + resp.data.Plot;
+        var actors = "Actors: " + resp.data.Actors;
+
+        var stringToLog = '\n' + title + '\n' + year + '\n' + imdb + '\n' + tomato + '\n' + country + '\n' + lang + '\n' + plot + '\n' + actors + '\n';
+
+        console.log(stringToLog);
+        logger.log(stringToLog);
     }).catch(err => {console.log(err)});
 }
