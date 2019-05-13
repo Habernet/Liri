@@ -15,20 +15,16 @@ exports.call = (song) => {
     })
 
     spotify
-        .search({ type: 'track', query: song })
-        .then((response) => {
-            var artist = 'Artist: ' + response.tracks.items[0].album.artists[0].name;
-            var song = 'Song: ' + song //undefined
-            var url = 'Preview: ' + response.tracks.items[0].external_urls.href; // undefined
-            // console.log(response.tracks.items[0].album) CANT FIND ALBUM
-            var stringToLog = '\n' + artist + '\n' + song + '\n' + url + '\n';
+        .search({ type: 'track', query: song, limit: 1})
+        .then((resp) => {
+            var resp = resp.tracks.items[0];
+            var artist = 'Artist: ' + resp.artists[0].name;
+            var song = 'Song: ' + resp.name;
+            var url = 'Preview: ' + resp.external_urls.spotify;
+            var album = 'Album: ' + resp.album.name;
+            var stringToLog = '\n' + artist + '\n' + song + '\n' + url + '\n' + album + '\n';
             console.log(stringToLog);
             logger.log(stringToLog);
-
-            // Artist(s)
-            // The song's name
-            // A preview link of the song from Spotify
-            // The album that the song is from
         })
         .catch((err) => {
             console.log(err);
