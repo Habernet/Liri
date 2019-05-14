@@ -32,7 +32,7 @@ One of my favorite features has to do with security! Listed under dependencies i
 
 ## Installation
 Make sure you have node.js installed!
-1. Clone the repo to your machine
+1. Clone the repo to your machine :computer:
 2. Create a .env file and store your API keys/ ID's and Secrets here with the following format:
 ```
     # Spotify API ID and Secret (as required by Spotify)
@@ -58,8 +58,7 @@ Make sure you have node.js installed!
 ```
 npm i
 ```
-5. Verify you have the modules installed by looking at the node_modules folder
-// Gif here
+5. Verify you have the modules installed by looking at the node_modules folder :open_file_folder:
 
 
 
@@ -81,7 +80,7 @@ Anyone can contribute as this is an open repo! However pull requests are managed
 
 ## Credits
 Credits are due to Trilogy Education and their Coding BootCamp at UNC. They gave me the inspiration to not just do the minimum and to push myself to learn  new technologies!
-// Phaberern and schmitty890
+Special thanks to Jason Schmitt who provided numerous resources for achieving the end goal.
 
 
 ## License
