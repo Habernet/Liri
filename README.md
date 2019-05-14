@@ -45,8 +45,17 @@ Describe and show how to run the tests with code examples.
 
 ## How to use?
 <h1>Once installed properly you can do the following!</h1>
+<p align="center">
 "Node liri.js"
 <img src="./assets/node-liri.gif">
+"movie-this"
+<img src="./assets/movie-this.gif">
+"spotify-this-song"
+<img src="./assets/spotify-this.gif">
+"concert-this"
+<img src="./assets/concert-this.gif">
+</p>
+
 
 
 ## Contribute
