@@ -65,21 +65,19 @@ npm i
 
 ## How to use?
 <h3>Once installed properly you can do the following!</h3>
-```
+`
 node liri.js
-```
+`
 <img src="./assets/node-liri.gif">
-```
+`
 movie-this
-```
+`
 <img src="./assets/movie-this.gif">
-```
-spotify-this-song
-```
+`spotify-this-song`
 <img src="./assets/spotify-this.gif">
-```
+`
 concert-this
-```
+`
 <img src="./assets/concert-this.gif">
 
 
