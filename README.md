@@ -35,24 +35,51 @@ Show what the library does as concisely as possible, developers should be able t
 
 ## Installation
 Provide step by step series of examples and explanations about how to get a development env running.
-Install with:
+1. Clone the repo to your machine
+2. Create a .env file and store your API keys/ ID's and Secrets here with the following format:
+    # Spotify API ID and Secret (as required by Spotify)
+
+    SPOTIFY_ID=yourIDhere
+    SPOTIFY_SECRET=yoursecrethere
+
+    # OMDB API key
+    OMDB_KEY=yourkeyhere
+
+    # BIT API ID
+    BIT_ID=yourIDhere
+3. Create a .gitignore file and list the files you do not want pushed to github here:
+    node_modules
+    .DS_Store
+    .env
+    log.txt
+4. Install NPM modules:
+    Because these are already listed in the node dependencies (package.json), you can run the following:
 ```
 npm i
 ```
+5. Verify you have the modules installed by looking at the node_modules folder
+// Gif here
 
-## Tests
-Describe and show how to run the tests with code examples.
+
 
 ## How to use?
 <h1>Once installed properly you can do the following!</h1>
 <p align="center">
+```
 "Node liri.js"
+```
 <img src="./assets/node-liri.gif">
+```
 "movie-this"
+```
 <img src="./assets/movie-this.gif">
+```
 "spotify-this-song"
+```
 <img src="./assets/spotify-this.gif">
+```
 "concert-this"
+```
 <img src="./assets/concert-this.gif">
 </p>
 
