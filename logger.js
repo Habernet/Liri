@@ -9,14 +9,9 @@ exports.log = (data) => {
     // write a new line with a timestamp from moment.js
     let now = new moment().format("MM:DD:YYYY:HH:mm");
     let timeStamp = '\n\n' + '----------' + now +'----------' + '\n\n';
-    fs.appendFile('log.txt', timeStamp, (err) => {
-        if (err){
-            console.log(err);
-        }
-    });
-
+   
     // write the data received
-    fs.appendFile('log.txt', data, (err) => { 
+    fs.appendFile('log.txt', timeStamp + data, (err) => { 
         if(err) {
             console.log(err);
         };

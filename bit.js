@@ -23,17 +23,21 @@ exports.call = (artist) => {
 
     // Make the call
     axios.get(queryURL).then(resp => {
+        var arrayToLog = [];
+        console.log(resp.data);
         // Now we will format for displaying in the console
-        for (let i = 0; i < 4; i++) {
+        for (let i = 0; i < resp.data.length; i++) {
+            var band = "Band: " + resp.data[i].lineup;
             var venue = "Venue name: " + resp.data[i].venue.name;
             var city = "City: " + resp.data[i].venue.city;
             var date = "Date: " + moment(resp.data[i].datetime).format("DD:MM:YYYY:HH:MM");
             var website = "Website: " + resp.data[i].url;
-            var stringToLog = '\n' + venue + '\n' + city + '\n' + date + '\n' + website + '\n';
+            var stringToLog = '\n' + band + '\n' + venue + '\n' + city + '\n' + date + '\n' + website + '\n';
             // Log it out chalked
             console.log(out(stringToLog));
-            // Send it to logger.js
-            logger.log(stringToLog);
+            // Push it out to main log object
+            arrayToLog.push(stringToLog);
         }
+        logger.log(arrayToLog);
     }).catch(err => { console.log(err) });
 }

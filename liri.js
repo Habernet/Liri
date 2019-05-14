@@ -87,14 +87,11 @@ inquirer.prompt(question).then(answers => {
             break;
         case choice('do-what-it-says'):
             doThis();
-            // Instead of prompting..it will the other file's main function, which will pull random
             break;
     };
 });
 
 //TO DO
 // 1. Validate with expect: typeof?
-// 2. something weird is happening with log..promises maybe? Still works kind of...want to fix.
 // 3. README!
 // 4. DO SOMETHING DIFFERENT WITH ERRORS.
-// 5. Finalize BIT returned data (how many ?)
