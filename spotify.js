@@ -2,6 +2,10 @@ exports.call = (song) => {
     // Bring in the logger
     const logger = require('./logger');
 
+    // Bring in Chalk
+    const chalk = require('chalk');
+    const out = chalk.green.italic;
+
     // Bring in the id and secret for the call
     const spotifyInfo = require("./keys");
     var spotifyID = spotifyInfo.spotify.id;
@@ -23,7 +27,7 @@ exports.call = (song) => {
             var url = 'Preview: ' + resp.external_urls.spotify;
             var album = 'Album: ' + resp.album.name;
             var stringToLog = '\n' + artist + '\n' + song + '\n' + url + '\n' + album + '\n';
-            console.log(stringToLog);
+            console.log(out(stringToLog));
             logger.log(stringToLog);
         })
         .catch((err) => {

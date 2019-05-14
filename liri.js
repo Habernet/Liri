@@ -5,27 +5,18 @@ const fs = require("fs"); // Filesystem
 const spotify = require("./spotify"); // Spotify package
 const omdb = require("./omdb"); // OMDB package
 const bit = require("./bit"); // Bands in Town Package
-const inquirer = require("inquirer"); // Load the inquirer
+const inquirer = require("inquirer"); // Inquirer package
+// Bring in Chalk
+const chalk = require('chalk');
+const out = chalk.green.inverse.bold;
+const choice = chalk.green;
 
-
-// Function to log everything out
-var writeLog = function (textToLog) {
-    // Log new lines to give room between logs
-    fs.appendFile("log.txt", '\r\n\r\n', function (err) {
-        if (err) {return console.log(err);};
-    });
-    // Use FS to write to log.txt every output
-    fs.appendFile("log.txt", textToLog, (err) => {
-        if (err) { console.log(err);};
-    })
-}
-
-
+// Ask user for band, make a call
 var concertThis = () => {
     let concertQuestion = {
         type: 'input',
         name: 'concert',
-        message: 'What band do you want to search for? ',
+        message: out('What band do you want to search for? '),
         validate: (name) => {
             return name !== '';
         }
@@ -36,14 +27,13 @@ var concertThis = () => {
     });
 };
 
+// Ask user for song, make a call
 var spotifyThis = () => {
     let spotifyQuestion = {
         type: 'input',
         name: 'spotify',
-        message: 'What song do you want to search for? ',
-        validate: (name) => {
-            return name !== '';
-        }
+        message: out('What song do you want to search for? '),
+        default: 'The Sign Ace of Base'
     };
 
     inquirer.prompt(spotifyQuestion).then(answer => {
@@ -51,14 +41,13 @@ var spotifyThis = () => {
     });
 };
 
+// Ask user for movie, make a call
 var movieThis = () => {
     let movieQuestion = {
         type: 'input',
         name: 'movie',
-        message: 'What movie are you looking for? ',
-        validate: (name) => {
-            return name !== '';
-        }
+        message: out('What movie are you looking for? '),
+        default: 'Mr. Nobody'
     };
 
     inquirer.prompt(movieQuestion).then(answer => {
@@ -66,38 +55,40 @@ var movieThis = () => {
     });
 };
 
+// First question on run
 let question = {
     type: 'list',
     name: 'command',
-    message: 'What would you like Liri to do? (arrow keys + enter to select)',
-    choices: ['movie-this', 'spotify-this-song', 'concert-this']
+    message: out('What would you like Liri to do? (arrow keys + enter to select)'),
+    choices: [choice('movie-this'), choice('spotify-this-song'), choice('concert-this'), choice('do-what-it-says')]
 }
 
-
+// Decide what to do based on answer to first question
 inquirer.prompt(question).then(answers => {
     switch (answers.command) {
-        case 'concert-this':
+        case choice('concert-this'):
             concertThis(); ``
             break;
-        case 'spotify-this-song':
+        case choice('spotify-this-song'):
             spotifyThis();
             break;
-        case 'movie-this':
+        case choice('movie-this'):
             movieThis();
             break;
-        case 'do-what-it-says':
-            // Still needs to be written
+        case choice('do-what-it-says'):
+            // Instead of prompting..it will the other file's main function, which will pull random
             break;
     };
 });
 
 //TO DO
-// 1. If no song is provided then your program will default to "The Sign" by Ace of Base. 
-//    If the user doesn't type a movie in, the program will output data for the movie 'Mr. Nobody.'
+// CHALK!
+// 1. Validate with expect: typeof?
 // 2. something weird is happening with log..promises maybe? Still works.
 // 3. Pull in from random.txt for the do-what-it-says bit
 // 5. README!
 // 7. DO SOMETHING DIFFERENT WITH ERRORS.
+// 8. Finalize BIT returned data (how many ?)
 
 // Might have to fake the below? Using inquirer 
 // `node liri.js do-what-it-says`

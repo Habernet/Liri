@@ -10,8 +10,9 @@ exports.call = (artist) => {
     // Bring in Moment.js to format the date NOT WORKING YET
     var moment = require('moment');
 
-    // var date = moment('2019-10-03T19:00:29', 'MM-DD-YYYY');
-    // console.log(date);
+    // Bring in Chalk
+    const chalk = require('chalk');
+    const out = chalk.yellow.italic;
 
     // Bring in logger
     const logger = require('./logger');
@@ -24,13 +25,14 @@ exports.call = (artist) => {
     axios.get(queryURL).then(resp => {
         // Now we will format for displaying in the console
         for (let i = 0; i < 2; i++) {
-            // Store this information in an object that can also be written to log.txt
             var venue = "Venue name: " + resp.data[i].venue.name;
             var city = "City: " + resp.data[i].venue.city;
             var date = "Date: " + moment(resp.data[i].datetime).format("DD:MM:YYYY:HH:MM");
             var website = "Website: " + resp.data[i].url;
-            var stringToLog = '\n' + venue + '\n' + city + '\n' + date + '\n' + website + '\n'
-            console.log(stringToLog);
+            var stringToLog = '\n' + venue + '\n' + city + '\n' + date + '\n' + website + '\n';
+            // Log it out chalked
+            console.log(out(stringToLog));
+            // Send it to logger.js
             logger.log(stringToLog);
         }
     }).catch(err => { console.log(err) });

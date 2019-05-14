@@ -9,6 +9,10 @@ exports.call = (movie) => {
     var keys = require("./keys");
     const OMDBKey = keys.omdb.key;
 
+    // Bring in Chalk
+    const chalk = require('chalk');
+    const out = chalk.blue.italic;
+
     // Query url
     var queryURL = 'http://www.omdbapi.com/?apikey=' + OMDBKey + '&t=' + movie;
 
@@ -26,7 +30,7 @@ exports.call = (movie) => {
 
         var stringToLog = '\n' + title + '\n' + year + '\n' + imdb + '\n' + tomato + '\n' + country + '\n' + lang + '\n' + plot + '\n' + actors + '\n';
 
-        console.log(stringToLog);
+        console.log(out(stringToLog));
         logger.log(stringToLog);
     }).catch(err => {console.log(err)});
 }
