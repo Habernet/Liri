@@ -1,15 +1,3 @@
-
-
-* If someone wanted to clone your app from github and run it themselves, they would need to supply their own `.env` file for it to work.
-* "npm i" as everything is already listed under dependencies.
-
-
-
-1. With node installed, navigate to directory. "node liri.js"
-//////////////
-
-
-
 # Liri
 A Siri like CLI app that responds to the commands "concert-this", "spotify-this-song", "movie-this", and "do-what-it-says".
 
@@ -34,9 +22,10 @@ Something else besides is Chalk! Chalk is simply something to make everything in
 Show what the library does as concisely as possible, developers should be able to figure out **how** your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
 
 ## Installation
-Provide step by step series of examples and explanations about how to get a development env running.
+Make sure you have node.js installed!
 1. Clone the repo to your machine
 2. Create a .env file and store your API keys/ ID's and Secrets here with the following format:
+```
     # Spotify API ID and Secret (as required by Spotify)
 
     SPOTIFY_ID=yourIDhere
@@ -47,11 +36,14 @@ Provide step by step series of examples and explanations about how to get a deve
 
     # BIT API ID
     BIT_ID=yourIDhere
+```
 3. Create a .gitignore file and list the files you do not want pushed to github here:
+```
     node_modules
     .DS_Store
     .env
     log.txt
+```
 4. Install NPM modules:
     Because these are already listed in the node dependencies (package.json), you can run the following:
 ```
@@ -63,8 +55,7 @@ npm i
 
 
 ## How to use?
-<h1>Once installed properly you can do the following!</h1>
-<p align="center">
+<h3>Once installed properly you can do the following!</h3>
 ```
 "Node liri.js"
 ```
@@ -81,7 +72,6 @@ npm i
 "concert-this"
 ```
 <img src="./assets/concert-this.gif">
-</p>
 
 
 
