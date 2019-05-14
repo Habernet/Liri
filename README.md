@@ -10,12 +10,17 @@ Include logo/demo screenshot etc.
 
 ## Tech/framework used
 This project is powered by Node.js!
-<h4><u>NPM packages:</u></h4>
+<h4>NPM packages:</h4>
 1. dotenv -- for securing vital information
+
 2. node-spotify-api -- for working with the Spotify API
+
 3. axios -- for working with OMDB API and Bands in Town API
+
 4. inquirer -- for interfacing with the user/ gathering input
+
 5. moment -- for dealing with timestamping logs and formatting dates (API output)
+
 6. chalk -- for making things look good!
 
 ## Features
