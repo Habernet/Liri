@@ -95,6 +95,6 @@ inquirer.prompt(question).then(answers => {
 //TO DO
 // 1. Validate with expect: typeof?
 // 2. something weird is happening with log..promises maybe? Still works kind of...want to fix.
-// 5. README!
-// 7. DO SOMETHING DIFFERENT WITH ERRORS.
-// 8. Finalize BIT returned data (how many ?)
+// 3. README!
+// 4. DO SOMETHING DIFFERENT WITH ERRORS.
+// 5. Finalize BIT returned data (how many ?)

@@ -24,7 +24,7 @@ exports.call = (artist) => {
     // Make the call
     axios.get(queryURL).then(resp => {
         // Now we will format for displaying in the console
-        for (let i = 0; i < 2; i++) {
+        for (let i = 0; i < 4; i++) {
             var venue = "Venue name: " + resp.data[i].venue.name;
             var city = "City: " + resp.data[i].venue.city;
             var date = "Date: " + moment(resp.data[i].datetime).format("DD:MM:YYYY:HH:MM");
