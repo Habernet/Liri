@@ -24,7 +24,6 @@ exports.call = (artist) => {
     // Make the call
     axios.get(queryURL).then(resp => {
         var arrayToLog = [];
-        console.log(resp.data);
         // Now we will format for displaying in the console
         for (let i = 0; i < resp.data.length; i++) {
             var band = "Band: " + resp.data[i].lineup;
