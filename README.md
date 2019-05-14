@@ -5,9 +5,6 @@ A Siri like CLI app that responds to the commands "concert-this", "spotify-this-
 This project was created as a learning platform for node.js and a few node modules! The project started very simply and as more knowledge was available, the project expanded to what you see it as now!
 
 
-## Screenshots
-Include logo/demo screenshot etc.
-
 ## Tech/framework used
 This project is powered by Node.js!
 #### NPM packages:
