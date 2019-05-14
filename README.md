@@ -61,7 +61,7 @@ npm i
 ## How to use?
 <h3>Once installed properly you can do the following!</h3>
 ```
-Node liri.js
+node liri.js
 ```
 <img src="./assets/node-liri.gif">
 ```
