@@ -95,3 +95,4 @@ inquirer.prompt(question).then(answers => {
 // 1. Validate with expect: typeof?
 // 3. README! How to make gifs and put them in
 // 4. DO SOMETHING DIFFERENT WITH ERRORS.
+// 5. Github links in readme?

@@ -10,7 +10,7 @@ Include logo/demo screenshot etc.
 
 ## Tech/framework used
 This project is powered by Node.js!
-<h4>NPM packages:</h4>
+#### NPM packages:
 1. dotenv -- for securing vital information
 
 2. node-spotify-api -- for working with the Spotify API
@@ -65,19 +65,13 @@ npm i
 
 ## How to use?
 <h3>Once installed properly you can do the following!</h3>
-`
-node liri.js
-`
+`node liri.js`
 <img src="./assets/node-liri.gif">
-`
-movie-this
-`
+`movie-this`
 <img src="./assets/movie-this.gif">
 `spotify-this-song`
 <img src="./assets/spotify-this.gif">
-`
-concert-this
-`
+`concert-this`
 <img src="./assets/concert-this.gif">
 
 
