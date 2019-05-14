@@ -55,6 +55,16 @@ var movieThis = () => {
     });
 };
 
+//Backstreet Boys
+var doThis = () => {
+    fs.readFile('random.txt', 'utf-8', (err, data) => {
+        if(err) {
+            console.log(err);
+        }
+        spotify.call(data);
+    })
+}
+
 // First question on run
 let question = {
     type: 'list',
@@ -76,22 +86,15 @@ inquirer.prompt(question).then(answers => {
             movieThis();
             break;
         case choice('do-what-it-says'):
+            doThis();
             // Instead of prompting..it will the other file's main function, which will pull random
             break;
     };
 });
 
 //TO DO
-// CHALK!
 // 1. Validate with expect: typeof?
-// 2. something weird is happening with log..promises maybe? Still works.
-// 3. Pull in from random.txt for the do-what-it-says bit
+// 2. something weird is happening with log..promises maybe? Still works kind of...want to fix.
 // 5. README!
 // 7. DO SOMETHING DIFFERENT WITH ERRORS.
 // 8. Finalize BIT returned data (how many ?)
-
-// Might have to fake the below? Using inquirer 
-// `node liri.js do-what-it-says`
-// Using the `fs` Node package, LIRI will take the text inside of random.txt and then use it to call one of LIRI's commands.
-// It should run `spotify-this-song` for "I Want it That Way," as follows the text in `random.txt`.
-// Edit the text in random.txt to test out the feature for movie-this and concert-this.
