@@ -9,17 +9,21 @@ This project was created as a learning platform for node.js and a few node modul
 Include logo/demo screenshot etc.
 
 ## Tech/framework used
-Ex. -
-
-<b>Built with</b>
-- [Electron](https://electron.atom.io)
+This project is powered by Node.js!
+<h4><u>NPM packages:</u></h4>
+1. dotenv -- for securing vital information
+2. node-spotify-api -- for working with the Spotify API
+3. axios -- for working with OMDB API and Bands in Town API
+4. inquirer -- for interfacing with the user/ gathering input
+5. moment -- for dealing with timestamping logs and formatting dates (API output)
+6. chalk -- for making things look good!
 
 ## Features
 Instead of using process.argv to capture command line arguments, I opted for Inquirer! Inquirer is a npm package that will prompt the user for input.
+
 Something else besides is Chalk! Chalk is simply something to make everything in the console look nicer. There can be some functionality to it as well. For example prompts will stand out more than an average line of text, and your options will also be styled different to the prompt.
 
-## Code Example
-Show what the library does as concisely as possible, developers should be able to figure out **how** your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
+One of my favorite features has to do with security! Listed under dependencies is a packaged called "dotenv". This allows us to save important information in environment variables locally. This is much more secure than pushing to Github for everyone to see! However it requires just a bit of work to get working; this is detailed below.
 
 ## Installation
 Make sure you have node.js installed!
@@ -57,19 +61,19 @@ npm i
 ## How to use?
 <h3>Once installed properly you can do the following!</h3>
 ```
-"Node liri.js"
+Node liri.js
 ```
 <img src="./assets/node-liri.gif">
 ```
-"movie-this"
+movie-this
 ```
 <img src="./assets/movie-this.gif">
 ```
-"spotify-this-song"
+spotify-this-song
 ```
 <img src="./assets/spotify-this.gif">
 ```
-"concert-this"
+concert-this
 ```
 <img src="./assets/concert-this.gif">
 
