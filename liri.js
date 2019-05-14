@@ -92,8 +92,15 @@ inquirer.prompt(question).then(answers => {
 });
 
 //TO DO
+// 1. If no song is provided then your program will default to "The Sign" by Ace of Base. 
+//    If the user doesn't type a movie in, the program will output data for the movie 'Mr. Nobody.'
 // 2. something weird is happening with log..promises maybe? Still works.
 // 3. Pull in from random.txt for the do-what-it-says bit
 // 5. README!
-// 6. format output of some of the API's MAINLY SPOTIFY
 // 7. DO SOMETHING DIFFERENT WITH ERRORS.
+
+// Might have to fake the below? Using inquirer 
+// `node liri.js do-what-it-says`
+// Using the `fs` Node package, LIRI will take the text inside of random.txt and then use it to call one of LIRI's commands.
+// It should run `spotify-this-song` for "I Want it That Way," as follows the text in `random.txt`.
+// Edit the text in random.txt to test out the feature for movie-this and concert-this.
