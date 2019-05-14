@@ -46,7 +46,7 @@ Make sure you have node.js installed!
     # BIT API ID
     BIT_ID=yourIDhere
 ```
-3. Create a .gitignore file and list the files you do not want pushed to github here:
+3. Create a .gitignore file and list the files you do not want pushed to github here :octocat: :
 ```
     node_modules
     .DS_Store
@@ -76,12 +76,14 @@ npm i
 
 
 ## Contribute
-Anyone can contribute as this is an open repo! However pull requests are managed by Patrick Haberern.
+Anyone can contribute as this is an open repo! :unlock: However pull requests are managed by Patrick Haberern.
 
-## Credits
+## Credits :mortar_board:
 Credits are due to Trilogy Education and their Coding BootCamp at UNC. They gave me the inspiration to not just do the minimum and to push myself to learn  new technologies!
 Special thanks to Jason Schmitt who provided numerous resources for achieving the end goal.
 
+# My GitHub
+:link: https://github.com/Habernet
 
 ## License
 
