@@ -75,6 +75,7 @@ Make sure you have node.js installed!
 
 5. Verify you have the modules installed by looking at the node_modules folder :open_file_folder:
 
+<img src="./assets/npmmodules.gif>
 
 
 ## How to use?
@@ -88,7 +89,7 @@ Make sure you have node.js installed!
 `concert-this`
 <img src="./assets/concert-this.gif">
 
-NOTE: All data returned will be logged out to log.txt in your javascript folder! :memo: :arrow_right: :open_file_folder: 
+NOTE => All data returned will be logged out to log.txt in your javascript folder! :memo: :arrow_right: :open_file_folder: 
 
 
 ## Contribute
