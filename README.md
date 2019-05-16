@@ -34,6 +34,7 @@ Make sure you have node.js installed!
 ```
     git clone https://github.com/Habernet/Liri.git
 ```
+<img src="./assets/gitclone.gif">
 2. Create a .env file and store your API keys/ ID's and Secrets here with the following format:
 ```
     # Spotify API ID and Secret (as required by Spotify)
@@ -48,6 +49,7 @@ Make sure you have node.js installed!
     BIT_ID=yourIDhere
 ```
 :heavy_exclamation_mark: NOTE: You will have to get your own keys for each of the above! :heavy_exclamation_mark:
+
 3. Create a .gitignore file and list the files you do not want pushed to github here :octocat: :
 ```
     node_modules
@@ -60,6 +62,8 @@ Make sure you have node.js installed!
 ```
 npm i
 ```
+<img src="./assets/npmi.gif">
+
 5. Verify you have the modules installed by looking at the node_modules folder :open_file_folder:
 
 
