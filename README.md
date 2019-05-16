@@ -8,17 +8,18 @@ This project was created as a learning platform for node.js and a few node modul
 ## Tech/framework used
 This project is powered by Node.js!
 #### NPM packages:
-1. dotenv -- for securing vital information
+1. [dotenv -- for securing vital information](https://www.npmjs.com/package/dotenv "dotenv")
 
 2. node-spotify-api -- for working with the Spotify API
 
-3. axios -- for working with OMDB API and Bands in Town API
+3. [axios -- for working with OMDB API and Bands in Town API](https://www.npmjs.com/package/axios "axios")
 
-4. inquirer -- for interfacing with the user/ gathering input
+4. [inquirer -- for interfacing with the user/ gathering input](https://www.npmjs.com/package/inquirer "inquirer")
 
-5. moment -- for dealing with timestamping logs and formatting dates (API output)
 
-6. chalk -- for making things look good!
+5. [moment -- for dealing with timestamping logs and formatting dates (API output)](https://www.npmjs.com/package/moment "moment")
+
+6. [chalk -- for making things look good!](https://www.npmjs.com/package/chalk "chalk")
 
 ## Features
 Instead of using process.argv to capture command line arguments, I opted for Inquirer! Inquirer is a npm package that will prompt the user for input.
