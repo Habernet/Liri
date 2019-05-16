@@ -38,5 +38,5 @@ exports.call = (artist) => {
             arrayToLog.push(stringToLog);
         }
         logger.log(arrayToLog);
-    }).catch(err => { console.log(err) });
+    }).catch(err => { console.log("Liri can't find that band!") });
 }

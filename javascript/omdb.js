@@ -32,5 +32,5 @@ exports.call = (movie) => {
 
         console.log(out(stringToLog));
         logger.log(stringToLog);
-    }).catch(err => {console.log(err)});
+    }).catch(err => {console.log("Liri can't find that movie!")});
 }

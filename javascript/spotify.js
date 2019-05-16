@@ -31,6 +31,6 @@ exports.call = (song) => {
             logger.log(stringToLog);
         })
         .catch((err) => {
-            console.log(err);
+            console.log("Liri can't find that song!");
         });
 }
