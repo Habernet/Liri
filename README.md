@@ -31,6 +31,9 @@ One of my favorite features has to do with security! Listed under dependencies i
 ## Installation
 Make sure you have node.js installed!
 1. Clone the repo to your machine :computer:
+```
+    git clone https://github.com/Habernet/Liri.git
+```
 2. Create a .env file and store your API keys/ ID's and Secrets here with the following format:
 ```
     # Spotify API ID and Secret (as required by Spotify)
@@ -44,6 +47,7 @@ Make sure you have node.js installed!
     # BIT API ID
     BIT_ID=yourIDhere
 ```
+:heavy_exclamation_mark: NOTE: You will have to get your own keys for each of the above! :heavy_exclamation_mark:
 3. Create a .gitignore file and list the files you do not want pushed to github here :octocat: :
 ```
     node_modules
@@ -71,6 +75,7 @@ npm i
 `concert-this`
 <img src="./assets/concert-this.gif">
 
+NOTE: All data returned will be logged out to log.txt in your javascript folder! :memo: :arrow_right: :open_file_folder: 
 
 
 ## Contribute
