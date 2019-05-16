@@ -75,7 +75,7 @@ Make sure you have node.js installed!
 
 5. Verify you have the modules installed by looking at the node_modules folder :open_file_folder:
 
-<img src="./assets/npmmodules.gif>
+<img src="./assets/npmmodules.gif">
 
 
 ## How to use?
