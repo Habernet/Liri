@@ -18,7 +18,7 @@ var concertThis = () => {
         name: 'concert',
         message: out('What band do you want to search for? '),
         validate: (name) => {
-            return name !== '';
+            return name !== "" || "please enter at least 1 character";
         }
     };
 
@@ -93,4 +93,4 @@ inquirer.prompt(question).then(answers => {
 
 //TO DO
 // 1. Validate with expect: typeof?
-// 4. DO SOMETHING DIFFERENT WITH ERRORS.
+// 2. Output in tables instead?
