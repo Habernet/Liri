@@ -7,7 +7,7 @@ exports.call = (artist) => {
     const keys = require('./keys');
     const BITID = keys.bit.id;
 
-    // Bring in Moment.js to format the date NOT WORKING YET
+    // Bring in Moment.js to format the date
     var moment = require('moment');
 
     // Bring in Chalk
